@@ -1,1 +1,49 @@
 # student-login.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Student Login</h1>
+<input type="text" id="username" placeholder="Enter Username">
+<input type="password" id="password" placeholder="Enter Password">
+<button onclick="login()">Login</button>
+<p id="msg"></p>
+<hr>
+<a href="register.html">Create New Account</a>
+</div>
+<script>
+async function login(){
+const username=document.getElementById("username").value
+const password=document.getElementById("password").value
+if(!username || !password){
+alert("Please enter username and password")
+return
+}
+try{
+const res=await fetch("http://127.0.0.1:5000/login",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({
+username,
+password
+})
+})
+const data=await res.json()
+if(data.role==="student"){
+localStorage.setItem("studentName",username)
+window.location="index.html"
+}else{
+document.getElementById("msg").innerText="Invalid student login"
+}
+}catch(err){
+document.getElementById("msg").innerText="Server Error"
+}
+}
+</script>
+</body>
+</html>
