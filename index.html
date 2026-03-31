@@ -1,84 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Student Feedback Survey</title>
-<link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <title>Student Feedback Survey</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-<div class="container">
-<h1>Course Feedback Survey</h1>
-<h3 id="welcomeUser"></h3>
-<button id="logoutBtn">Logout</button>
-<div class="progress">
-<div id="progressBar"></div>
-</div>
-<p id="stepCounter"></p>
-<form id="surveyForm">
-<div class="step">
-<h3>1. Overall Course Experience</h3>
-<select id="q1" required>
-<option value="">Select an option</option>
-<option value="excellent">Excellent</option>
-<option value="good">Good</option>
-<option value="average">Average</option>
-<option value="poor">Poor</option>
-</select>
-<div id="experienceExplain" style="display:none; margin-top:15px;">
-<textarea id="q1_explain" placeholder="Please explain your experience..."></textarea>
-</div>
-</div>
-<div class="step">
-<h3>2. Teaching Quality</h3>
-<textarea id="q2" required></textarea>
-</div>
-<div class="step">
-<h3>3. Course Content</h3>
-<textarea id="q3" required></textarea>
-</div>
-<div class="step">
-<h3>4. Course Difficulty</h3>
-<select id="q4" required>
-<option value="">Select difficulty</option>
-<option value="easy">Easy</option>
-<option value="moderate">Moderate</option>
-<option value="difficult">Difficult</option>
-</select>
-</div>
-<div class="step">
-<h3>5. Learning Materials</h3>
-<textarea id="q5" required></textarea>
-</div>
-<div class="step">
-<h3>6. Student Engagement</h3>
-<textarea id="q6" required></textarea>
-</div>
-<div class="step">
-<h3>7. What Did You Like Most?</h3>
-<textarea id="q7" required></textarea>
-</div>
-<div class="step">
-<h3>8. What Needs Improvement?</h3>
-<textarea id="q8" required></textarea>
-</div>
-<div class="step">
-<h3>9. Suggestions</h3>
-<textarea id="q9" required></textarea>
-</div>
-<div class="step">
-<h3>10. Additional Comments</h3>
-<textarea id="q10" required></textarea>
-</div>
-<div class="buttons">
-<button type="button" id="prevBtn">Previous</button>
-<button type="button" id="nextBtn">Next</button>
-<button type="button" id="submitBtn">Submit</button>
-</div>
-</form>
-<p id="result"></p>
-<hr>
-<a href="admin.html">Go To Admin Dashboard</a>
-</div>
-<script src="script.js"></script>
+
+    <div class="container">
+
+        <h1>Course Feedback Survey</h1>
+
+        <h3 id="welcomeUser"></h3>
+
+        <button onclick="logout()">Logout</button>
+
+
+
+        <form id="surveyForm">
+
+            <div class="step">
+
+                <h3>1. Overall Course Experience</h3>
+
+                <select id="q1" onchange="checkExperience()" required>
+                    <option value="">Select an option</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                </select>
+
+                <div id="experienceExplain" style="display:none; margin-top:15px;">
+                    <textarea id="q1_explain" placeholder="Please explain your experience..."></textarea>
+                </div>
+
+            </div>
+
+            <div class="step">
+                <h3>2. Teaching Quality</h3>
+                <textarea id="q2" placeholder="Describe teaching quality..." required></textarea>
+            </div>
+
+            <div class="step">
+                <h3>3. Course Content</h3>
+                <textarea id="q3" placeholder="What do you think about course content?" required></textarea>
+            </div>
+
+            <div class="step">
+                <h3>4. Course Difficulty</h3>
+
+                <select id="q4" required>
+                    <option value="">Select difficulty</option>
+                    <option value="easy">Easy</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="difficult">Difficult</option>
+                </select>
+
+            </div>
+
+            <div class="step">
+                <h3>5. Learning Materials</h3>
+                <textarea id="q5" placeholder="Were the materials helpful?" required></textarea>
+            </div>
+
+            <div class="step">
+                <h3>6. Student Engagement</h3>
+                <textarea id="q6" placeholder="How engaging were the classes?" required></textarea>
+            </div>
+
+            <div class="step">
+                <h3>7. What Did You Like Most?</h3>
+                <textarea id="q7" placeholder="Share your favorite part..." required></textarea>
+            </div>
+
+            <div class="step">
+                <h3>8. What Needs Improvement?</h3>
+                <textarea id="q8" placeholder="What could be improved?" required></textarea>
+            </div>
+
+            <div class="step">
+                <h3>9. Suggestions</h3>
+                <textarea id="q9" placeholder="Any suggestions?" required></textarea>
+            </div>
+
+            <div class="step">
+                <h3>10. Additional Comments</h3>
+                <textarea id="q10" placeholder="Anything else you'd like to add?" required></textarea>
+            </div>
+
+            <div class="buttons">
+
+                <button type="button" onclick="submitFeedback()" id="submitBtn">Submit Feedback</button>
+
+            </div>
+
+        </form>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+
+        const studentName = localStorage.getItem("studentName")
+
+        if (!studentName) {
+
+            alert("Please login first")
+            window.location = "login.html"
+
+        }
+
+        document.getElementById("welcomeUser").innerText = "Welcome " + studentName
+
+        function logout() {
+
+            localStorage.removeItem("studentName")
+            window.location = "login.html"
+
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
