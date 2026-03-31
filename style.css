@@ -1,170 +1,217 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
 }
+
 /* Page Background */
-body{
-background:#0f0f0f;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:flex-start;
-padding:40px 20px;
-color:#e5e5e5;
+
+body {
+    background: #0f0f0f;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    color: #e5e5e5;
 }
+
 /* Glass Card Container */
-.container{
-width:750px;
-max-width:95%;
-background:#181818;
-padding:35px 40px;
-border-radius:12px;
-box-shadow:0 20px 50px rgba(0,0,0,0.7);
-border:1px solid rgba(255,255,255,0.05);
+
+.container {
+    width: 750px;
+    max-width: 95%;
+    background: #181818;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 /* Titles */
-h1{
-text-align:center;
-margin-bottom:25px;
-color:#ffffff;
-font-weight:700;
-letter-spacing:1px;
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
-h2{
-margin-top:35px;
-margin-bottom:10px;
-color:#f5f5f5;
+
+h2 {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    color: #f5f5f5;
 }
-h3{
-margin-top:20px;
-font-size:16px;
-color:#bbbbbb;
+
+h3 {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #bbbbbb;
 }
+
 /* Inputs */
+
 input,
 textarea,
-select{
-width:100%;
-margin-top:8px;
-margin-bottom:16px;
-padding:12px 14px;
-border-radius:6px;
-border:1px solid #333;
-font-size:14px;
-background:#141414;
-color:#fff;
-transition:all .25s ease;
+select {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    font-size: 14px;
+    background: #141414;
+    color: #fff;
+    transition: all .25s ease;
 }
+
 /* Focus Animation */
+
 input:focus,
 textarea:focus,
-select:focus{
-outline:none;
-border-color:#e50914;
-background:#1c1c1c;
-box-shadow:0 0 0 2px rgba(229,9,20,0.4);
+select:focus {
+    outline: none;
+    border-color: #e50914;
+    background: #1c1c1c;
+    box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.4);
 }
+
 /* Textarea */
-textarea{
-min-height:90px;
-resize:vertical;
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
 }
+
 /* Buttons */
-button{
-width:100%;
-padding:14px;
-border:none;
-border-radius:6px;
-background:#e50914;
-color:white;
-font-size:15px;
-font-weight:600;
-cursor:pointer;
-transition:all .25s ease;
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #e50914;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s ease;
 }
-button:hover{
-background:#f6121d;
-transform:scale(1.02);
-box-shadow:0 6px 20px rgba(229,9,20,0.5);
+
+button:hover {
+    background: #f6121d;
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.5);
 }
+
 /* Result message */
-#result{
-margin-top:18px;
-text-align:center;
-font-weight:600;
-color:#e50914;
+
+#result {
+    margin-top: 18px;
+    text-align: center;
+    font-weight: 600;
+    color: #e50914;
 }
+
 /* Links */
-a{
-display:block;
-text-align:center;
-margin-top:18px;
-font-weight:600;
-color:#e50914;
-text-decoration:none;
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    font-weight: 600;
+    color: #e50914;
+    text-decoration: none;
 }
-a:hover{
-text-decoration:underline;
+
+a:hover {
+    text-decoration: underline;
 }
+
 /* Admin Chart */
-canvas{
-margin-top:25px;
+
+canvas {
+    margin-top: 25px;
 }
+
 /* Negative Feedback List */
-#negativeList{
-margin-top:15px;
-padding-left:0;
-list-style:none;
+
+#negativeList {
+    margin-top: 15px;
+    padding-left: 0;
+    list-style: none;
 }
-#negativeList li{
-background:#1c1c1c;
-border-left:5px solid #e50914;
-padding:10px 12px;
-margin-bottom:10px;
-border-radius:4px;
-font-size:14px;
+
+#negativeList li {
+    background: #1c1c1c;
+    border-left: 5px solid #e50914;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 14px;
 }
+
 /* Divider */
-hr{
-margin:25px 0;
-border:none;
-border-top:1px solid #333;
+
+hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 1px solid #333;
 }
+
 /* Responsive */
-@media(max-width:600px){
-.container{
-padding:25px;
+
+@media(max-width:600px) {
+
+    .container {
+        padding: 25px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
 }
-h3{
-font-size:15px;
-}
-}
+
 /* Survey Steps */
-.step{
-display:none;
+
+.step {
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #222;
 }
+
 /* Progress Bar */
-.progress{
-height:8px;
-background:#333;
-border-radius:5px;
-margin:20px 0;
+
+.progress {
+    height: 8px;
+    background: #333;
+    border-radius: 5px;
+    margin: 20px 0;
 }
-#progressBar{
-height:8px;
-background:#e50914;
-width:10%;
-border-radius:5px;
-transition:.3s;
+
+#progressBar {
+    height: 8px;
+    background: #e50914;
+    width: 10%;
+    border-radius: 5px;
+    transition: .3s;
 }
+
 /* Buttons Layout */
-.buttons{
-display:flex;
-gap:10px;
-margin-top:10px;
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
 }
-#submitBtn{
-display:none;
+
+#submitBtn {
+    display: block;
 }
