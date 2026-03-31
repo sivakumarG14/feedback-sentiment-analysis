@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.1.1/wordcloud2.min.js"></script>
 
     <style>
         body {
@@ -99,17 +98,20 @@
             min-height: 350px;
         }
 
+        .list-card {
+            min-height: 300px;
+        }
+
+        .card-wide {
+            grid-column: 1 / -1;
+        }
+
         .card h3 {
             margin-top: 0;
             margin-bottom: 15px;
         }
 
         .chart-container {
-            height: 260px;
-        }
-
-        #wordCloud {
-            width: 100%;
             height: 260px;
         }
 
@@ -131,6 +133,10 @@
 
             .grid {
                 grid-template-columns: 1fr;
+            }
+
+            .card-wide {
+                grid-column: auto;
             }
 
         }
@@ -187,27 +193,22 @@
                 </div>
             </div>
 
-            <div class="card">
-                <h3>Feedback Word Cloud</h3>
-                <canvas id="wordCloud" width="500" height="260"></canvas>
-            </div>
-
-            <div class="card">
+            <div class="card list-card">
                 <h3>Top Negative Feedback</h3>
                 <ul id="negativeList"></ul>
             </div>
 
-            <div class="card">
+            <div class="card list-card">
                 <h3>Negative Complaint Keywords</h3>
                 <ul id="negativeKeywords"></ul>
             </div>
 
-            <div class="card">
+            <div class="card list-card">
                 <h3>Positive Insights</h3>
                 <ul id="positiveKeywords"></ul>
             </div>
 
-            <div class="card">
+            <div class="card card-wide">
                 <h3>Sentiment Trend Over Time</h3>
                 <div class="chart-container">
                     <canvas id="trendChart"></canvas>
