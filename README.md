@@ -1,10 +1,10 @@
-#  Student Feedback Sentiment Analysis System
+# 📊 Student Feedback Sentiment Analysis System
 
-> A full-stack web application that collects student course feedback through a multi-step survey, automatically analyzes the sentiment (Positive / Negative / Neutral) using a **Rule-Based NLP Model**, encrypts feedback for privacy, and presents insights on an **Admin Analytics Dashboard** with charts and word clouds.
+> A full-stack web application that collects student course feedback through a multi-step survey, automatically analyzes the sentiment (Positive / Negative / Neutral) using a **Rule-Based NLP Model**, encrypts feedback for privacy, and presents insights on an **Admin Analytics Dashboard** with charts.
 
 ---
 
-##  Table of Contents
+## 📌 Table of Contents
 
 1. [Project Overview](#-project-overview)
 2. [Key Features](#-key-features)
@@ -21,7 +21,7 @@
 
 ---
 
-##  Project Overview
+## 🔍 Project Overview
 
 | Aspect | Details |
 |--------|---------|
@@ -34,29 +34,28 @@
 
 ---
 
-##  Key Features
+## ✨ Key Features
 
 ### For Students
--  **User Registration & Login** — Students create an account and log in securely
--  **10-Question Multi-Step Survey** — Covers overall experience, teaching quality, course content, difficulty, materials, engagement, likes, improvements, and suggestions
--  **Progress Bar** — Visual indicator showing survey completion progress
--  **Conditional Questions** — Extra explanation box appears for certain selections (e.g., "Good" or "Poor" experience)
--  **One Submission Per Student** — Prevents duplicate submissions
+- ✅ **User Registration & Login** — Students create an account and log in securely
+- ✅ **10-Question Multi-Step Survey** — Covers overall experience, teaching quality, course content, difficulty, materials, engagement, likes, improvements, and suggestions
+- ✅ **Progress Bar** — Visual indicator showing survey completion progress
+- ✅ **Conditional Questions** — Extra explanation box appears for certain selections (e.g., "Good" or "Poor" experience)
+- ✅ **One Submission Per Student** — Prevents duplicate submissions
 
 ### For Admins
--  **Analytics Dashboard** — View overall sentiment statistics at a glance
--  **Pie Chart** — Sentiment distribution (Positive vs Negative vs Neutral)
--  **Bar Chart** — Sentiment comparison
--  **Word Cloud** — Visual representation of frequently mentioned topics
--  **Top Negative Feedback** — List of the most critical student complaints
--  **Keyword Extraction** — Top positive and negative keywords from feedback
--  **Sentiment Trend Over Time** — Line chart showing sentiment changes
--  **Auto-Refresh** — Dashboard refreshes every 10 seconds
+- ✅ **Analytics Dashboard** — View overall sentiment statistics at a glance
+- ✅ **Pie Chart** — Sentiment distribution (Positive vs Negative vs Neutral)
+- ✅ **Bar Chart** — Sentiment comparison
+- ✅ **Top Negative Feedback** — List of the most critical student complaints
+- ✅ **Keyword Extraction** — Top positive and negative keywords from feedback
+- ✅ **Sentiment Trend Over Time** — Line chart showing sentiment changes
+- ✅ **Auto-Refresh** — Dashboard refreshes every 10 seconds
 
 ### Security
--  **Password Hashing** — SHA-256 hashing for stored passwords
--  **Feedback Encryption** — Fernet symmetric encryption for all stored feedback text
--  **CORS Enabled** — Allows frontend-backend communication across origins
+- 🔐 **Password Hashing** — SHA-256 hashing for stored passwords
+- 🔐 **Feedback Encryption** — Fernet symmetric encryption for all stored feedback text
+- 🔐 **CORS Enabled** — Allows frontend-backend communication across origins
 
 ---
 
@@ -71,13 +70,12 @@
 | **Encryption** | `cryptography` library (Fernet) |
 | **Password Security** | `hashlib` (SHA-256) |
 | **Charts** | [Chart.js](https://www.chartjs.org/) |
-| **Word Cloud** | [wordcloud2.js](https://github.com/timdream/wordcloud2.js) |
 | **API Communication** | RESTful JSON APIs with `fetch()` |
 | **Cross-Origin** | `flask-cors` |
 
 ---
 
-##  Architecture Diagram
+## 🏗 Architecture Diagram
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -89,7 +87,7 @@
 │                                  (Analytics Dashboard)   │
 │                                                          │
 │  Uses: style.css, script.js, admin.js                    │
-│  Libs: Chart.js, wordcloud2.js                           │
+│  Libs: Chart.js                                           │
 └──────────────────┬───────────────────────────────────────┘
                    │  HTTP REST API (JSON)
                    │  (fetch calls to http://127.0.0.1:5000)
@@ -124,7 +122,7 @@
 
 ---
 
-##  Project File Structure
+## 📂 Project File Structure
 
 ```
 feedbackanalysissystem/
@@ -137,7 +135,7 @@ feedbackanalysissystem/
 ├── style.css                   # Global dark-themed stylesheet
 ├── script.js                   # Survey form logic (steps, validation, submission)
 ├── admin.html                  # Admin analytics dashboard
-├── admin.js                    # Dashboard logic (charts, stats, word cloud)
+├── admin.js                    # Dashboard logic (charts, stats, analytics lists)
 ├── requirements.txt            # Python dependencies
 │
 ├── backend/
@@ -159,7 +157,7 @@ feedbackanalysissystem/
 
 ---
 
-##  Detailed File Descriptions
+## 📄 Detailed File Descriptions
 
 ### Frontend Files
 
@@ -172,8 +170,8 @@ feedbackanalysissystem/
 | `index.html` | **Main survey page** — 10-step feedback form with progress bar. Validates each step before advancing. Collects all answers and sends combined feedback text to `/predict` API. Shows sentiment result. |
 | `style.css` | Global CSS — Dark theme (`#0f0f0f` background), glass-card containers, Netflix-red accent (`#e50914`), responsive layout, focus animations, progress bar styling. |
 | `script.js` | Survey step navigation (next/previous), progress bar updates, input validation, conditional question logic, and async feedback submission via `fetch`. |
-| `admin.html` | **Admin Dashboard** — Displays stats cards (Total, Positive, Negative, Neutral), Pie Chart, Bar Chart, Word Cloud, Top Negative Feedback list, Keyword lists (positive & negative), and Sentiment Trend line chart. Uses Chart.js and wordcloud2.js. Has its own inline styles (light theme with Poppins font). |
-| `admin.js` | Fetches data from all admin API endpoints, renders Chart.js charts (pie, bar, line), generates word cloud, populates keyword lists. Auto-refreshes every 10 seconds. |
+| `admin.html` | **Admin Dashboard** — Displays stats cards (Total, Positive, Negative, Neutral), Pie Chart, Bar Chart, Top Negative Feedback list, Keyword lists (positive & negative), and Sentiment Trend line chart. Uses Chart.js. Has its own inline styles (light theme with Poppins font). |
+| `admin.js` | Fetches data from all admin API endpoints, renders Chart.js charts (pie, bar, line), and populates keyword lists. Auto-refreshes every 10 seconds. |
 
 ### Backend Files
 
@@ -196,7 +194,7 @@ feedbackanalysissystem/
 
 ---
 
-##  How the Sentiment Analysis Works
+## 🧠 How the Sentiment Analysis Works
 
 The system uses a **Rule-Based Sentiment Analysis** approach (no machine learning model at runtime). Here is the scoring pipeline:
 
@@ -286,7 +284,7 @@ All endpoints are served by the Flask backend at `http://127.0.0.1:5000` (defaul
 
 ---
 
-##  User Roles & Authentication Flow
+## 👤 User Roles & Authentication Flow
 
 ```
 ┌─────────────┐        ┌──────────────────┐        ┌─────────────────┐
@@ -314,7 +312,7 @@ All endpoints are served by the Flask backend at `http://127.0.0.1:5000` (defaul
 
 ---
 
-##  How to Run the Project
+## 🚀 How to Run the Project
 
 ### Prerequisites
 
@@ -352,7 +350,7 @@ python app.py
 
 The server starts at: **`http://127.0.0.1:10000`**
 
->  The port can be changed via the `PORT` environment variable.
+> 💡 The port can be changed via the `PORT` environment variable.
 
 ### Step 4: Open the Frontend
 
@@ -378,9 +376,9 @@ Then open: **`http://localhost:8080/login.html`**
 3. **Fill out** the 10-question survey
 4. **Submit** — You'll see the detected sentiment
 5. **Switch to Admin**: Go back to login.html → "Admin Login"
-6. **View Dashboard** — See charts, word cloud, and analytics
+6. **View Dashboard** — See charts and analytics
 
->  **Important**: The frontend `fetch` calls point to `http://127.0.0.1:5000`. If your Flask server runs on a different port (default is `10000`), update the URLs in the HTML/JS files accordingly, or set `PORT=5000` when starting the server:
+> ⚠️ **Important**: The frontend `fetch` calls point to `http://127.0.0.1:5000`. If your Flask server runs on a different port (default is `10000`), update the URLs in the HTML/JS files accordingly, or set `PORT=5000` when starting the server:
 > ```bash
 > set PORT=5000   # Windows
 > python app.py
@@ -388,7 +386,7 @@ Then open: **`http://localhost:8080/login.html`**
 
 ---
 
-##  Sample Data
+## 📊 Sample Data
 
 The `submissions.json` file comes pre-loaded with **21 sample feedback entries** from students:
 
@@ -417,11 +415,11 @@ The `submissions.json` file comes pre-loaded with **21 sample feedback entries**
 | **Student Login** (`student-login.html`) | Username/password form with link to registration |
 | **Registration** (`register.html`) | New account creation form |
 | **Survey Form** (`index.html`) | 10-step multi-question survey with progress bar, dark theme, red accents |
-| **Admin Dashboard** (`admin.html`) | Light-themed analytics page with stat cards, pie chart, bar chart, word cloud, keyword lists, negative feedback list, and trend chart |
+| **Admin Dashboard** (`admin.html`) | Light-themed analytics page with stat cards, pie chart, bar chart, keyword lists, negative feedback list, and trend chart |
 
 ---
 
-##  Notes for Supervisor
+## 📝 Notes for Supervisor
 
 1. **No external ML model needed** — The sentiment engine is entirely rule-based using a JSON lexicon, making it lightweight and easy to understand.
 2. **Encryption at rest** — All feedback text is encrypted with AES (Fernet) before being saved to `submissions.json`. Decryption happens only when admins view the data.
