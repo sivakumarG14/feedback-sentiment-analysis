@@ -1,51 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Admin Login</title>
-<link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-<div class="container">
-<h1>Admin Login</h1>
-<input type="text" id="username" placeholder="Enter Admin Username">
-<input type="password" id="password" placeholder="Enter Admin Password">
-<button onclick="adminLogin()">Login</button>
-<p id="msg"></p>
-<hr>
-<a href="login.html">Back to Login</a>
-</div>
-<script>
-async function adminLogin(){
-const username=document.getElementById("username").value
-const password=document.getElementById("password").value
-if(!username || !password){
-document.getElementById("msg").innerText="Please enter username and password"
-return
-}
-try{
-const res=await fetch("http://127.0.0.1:5000/login",{
-method:"POST",
-headers:{"Content-Type":"application/json"},
-body:JSON.stringify({
-username,
-password
-})
-})
-const data=await res.json()
-// ADMIN VERIFIED
-if(data.role==="admin"){
-localStorage.setItem("adminUser",username)
-window.location="admin.html"
-}
-// INVALID ADMIN LOGIN
-else{
-document.getElementById("msg").innerText="Invalid or wrong credentials"
-}
-}catch(err){
-document.getElementById("msg").innerText="Server error"
-}
-}
-</script>
+
+    <div class="container">
+
+        <h1>Admin Login</h1>
+
+        <input type="text" id="username" placeholder="Enter Admin Username">
+
+        <input type="password" id="password" placeholder="Enter Admin Password">
+
+        <button onclick="adminLogin()">Login</button>
+
+        <p id="msg"></p>
+
+        <hr>
+
+        <a href="login.html">Back to Login</a>
+
+    </div>
+
+    <script>
+
+        async function adminLogin() {
+
+            const username = document.getElementById("username").value
+            const password = document.getElementById("password").value
+
+            if (!username || !password) {
+
+                document.getElementById("msg").innerText = "Please enter username and password"
+                return
+
+            }
+
+            try {
+
+                const res = await fetch("http://127.0.0.1:5000/login", {
+
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+
+                    body: JSON.stringify({
+                        username,
+                        password
+                    })
+
+                })
+
+                const data = await res.json()
+
+                // ADMIN VERIFIED
+                if (data.role === "admin") {
+
+                    localStorage.setItem("adminUser", username)
+
+                    window.location = "admin.html"
+
+                }
+
+                // INVALID ADMIN LOGIN
+                else {
+
+                    document.getElementById("msg").innerText = "Invalid or wrong credentials"
+
+                }
+
+            } catch (err) {
+
+                document.getElementById("msg").innerText = "Server error"
+
+            }
+
+        }
+
+    </script>
+
 </body>
+
 </html>
