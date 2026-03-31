@@ -1,1 +1,12 @@
-
+[
+    {
+        "username": "Ramu",
+        "password": "094caab16ff8cd4a7ae18d737f751f4dbe40c68d4a812e25f265432f4d868fec",
+        "role": "student"
+    },
+    {
+        "username": "Siva",
+        "password": "1fa45393d22c1774047f6ef6a646f188888b53602341b591f8bb125966c8d2ad",
+        "role": "admin"
+    }
+]
