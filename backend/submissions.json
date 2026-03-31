@@ -1,1 +1,128 @@
-
+[
+    {
+        "name": "Rahul",
+        "feedback": "gAAAAABptZ7SlqAQrL5MsDjDgiGVFFIYVXQmP9Ypdx17AtnBpPyLeHMpz0Uy8pJS3GkASH_ChBNuiERONaB_muOf1CYZTw6sO4WGelHURAowk9BzhEYDicNuLPuGn6SB6954CSIqZnyVjF3HbUF4IXdt8poPv-jxxQ_P8Fr92j6ss3KeuM6chgnNrWnipzaT-hyharAtFqj1h_237-xKT-y5ZNwAIXcXZqQbhM9wPgO7P5k-4U_utdAbK3m1aFyTVdYbtiKkAokGVwFmlsncKcwAZPKRRqg9XN8Bei7LDvv7ysoiOdqxDVUvYTaqZXTXVAI5FN33UZprTFU5AAaqHlOuhvuD9Vcjz0F8TS0h3MwZi6T_0vM9XTX5EoG1r_hXfmEZV-sEQ6preyAsXqqBKSNnTJGsKzl_NzmpYPdT-Rp5TL-XJ7-d7SpQ87AxU0oGaPJTvIW3BQqqXpG0AS87fctqiYEbVmIBS0RPuRLTyl4HlTWzLeUFYru5kpDgSvHHUl5WDSpX5sNaztG_qB82N-Dz7QkkKLgQA3EVNB3guTRL8--w88n-SM5aCI1Tx-tmKw1sGyBN_nDGqlkbc0hL26yFNwMJpGApsYyvch5U5p93lTxrfWnkZvhloqTr-YqVmIYKjXIMuVp0XJrTZtEPePbJ-hGRM4FolvePtmG1sNwZxGsDIYSc_JlvseXw82WngqMOQpbycnhMQFue8AkHnFmQ56CGU5se-K8YYO-g7d1Sqkps8HvsnxKbRuch5doZwaTfAUPVnzDAB3KJHwVd2-yg5e0HGrwR5EolI7kOLpO-w4O6uhQ6tpJgbSdhSaECm3aa8fY8X7E3LPcxndsm7omj2gLh307xrw==",
+        "sentiment": "positive",
+        "score": 4
+    },
+    {
+        "name": "Rahul",
+        "feedback": "gAAAAABptaPLBu2-1r7xcGGqIx16qzkgy2ten20h-gVSHlWqhrFZNJ69uXtnb3xm8nmt_EsVFe0MP-WehDsYaFZOboNRDMlHWGnPKazNSr3VrYsjsFATkG-JWUxL9sTlvpXsU1aU3ssGWbjiU2TJtYa8KY0RZeXSog==",
+        "sentiment": "positive",
+        "score": 1
+    },
+    {
+        "name": "Priya",
+        "feedback": "gAAAAABptaPLT8glCBJ5XQwa04UQApupeyC6XryQOrQwiJ8aoqwsCyAIQPTNIovB4t1bCgY5SEXlnXPuXWCuYlWAVrPvbfWbBGBrW5X69YglcbsoyI9C_RDoe0_BmltfIB8NcrQDouWF",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Amit",
+        "feedback": "gAAAAABptaPLP2Z2GB4fEUltbDkoE_8x6bOybyUXfr4WCBuWe1i_K7cEH7vdML7q1MSRB030-_5YJGqo24CJlWyahMQ6Y-j5jsGcnHEiEQjDMNAwYNeg6I0XYtE6IBZNNo1eRLC48m4b",
+        "sentiment": "negative",
+        "score": -1
+    },
+    {
+        "name": "Sneha",
+        "feedback": "gAAAAABptaPLSyW3zzH1ylDOGBAYlzuB8WLc4Yczk-MSa_fvoUXJbQ933bcaZLDx0ZPDtpSiih13U2z_p0FknVa-_qivsknbxI--NqGGyLds8eIRq_XD-Bz8QUZ0SOTu678IY0rTsUCR",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Kiran",
+        "feedback": "gAAAAABptaPLf7Nrq8odv6FlRoRyzZhJ45ENx5ioQPrtH8ASGNQGAsHnbzBKtoUXucfj2gHAn8jWa6akSVhTLW8ZUN1NVQm0QRVBfF0gDSQ8pIudYWPXlFY=",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Divya",
+        "feedback": "gAAAAABptaPLPyafSrrHPsba9tCs7X7CODsYj2KLCyehSH1uJYRd9BwoSvLtkTB7dPHgAMhqD8m_8MBFvr-QLqzuJiZFEArnJB242glirSXOwErpQmJ2JpT2nvGhVEb3Goy2xMy60vEn",
+        "sentiment": "positive",
+        "score": 1
+    },
+    {
+        "name": "Arjun",
+        "feedback": "gAAAAABptaPLi7-mOQhDgNG-yqtk82_9AIMHNIkSGnA61vekcI0W1YXxpJiS8Z4ePu8EfKjEXEeBmb4o70alnrePIodGklXGSN2qMFadjBVfWytiRcTFAKo=",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Meena",
+        "feedback": "gAAAAABptaPLlbLiIgE2_ghWNjzrVLT4tH5Nt9F3zpK51lYWHdmPcMj5ywcK35_X8Y7FSJY4XZvuxDdOCBvZ6XjUAGcC6aur6WsY5_m7gpEoH0sCEAt5HAI=",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Vikram",
+        "feedback": "gAAAAABptaPLCsTG4I_S8AIXrikOIl4wxzUaY0VB79zPiNyHvt-o9pvQSZCS7bORrVqGPGoYcx4vJArNpjidSrj9kCWpiDd5OuMrjbj_-1BvxPyIPFnOrmhSkKLn_RKR3o2W82kerWoe",
+        "sentiment": "negative",
+        "score": -1
+    },
+    {
+        "name": "Neha",
+        "feedback": "gAAAAABptaPL_BRO37BJfER6ZAs2Neo67uou84WkoDOMmqJQDCDA8UIKOEe2o023jvw5LAdFzVKUyf2aq8AhmDkXxR-moqOAsoI_QFr50XE3COjn_lMXOHys5zDhQgEGZvheWRKh6GdM",
+        "sentiment": "positive",
+        "score": 1
+    },
+    {
+        "name": "Ravi",
+        "feedback": "gAAAAABptaPLryBzgHXQGaxevT-wPD_j9HtiXgaQ-yECtDXYzJCv3bDzxbeDvPgEwnLy0H2o5t-7N18Uc4w9sM0BDhnd9eZkgxi5A3UoAHB03l9unY6akzk=",
+        "sentiment": "positive",
+        "score": 1
+    },
+    {
+        "name": "Anjali",
+        "feedback": "gAAAAABptaPLBWVkeq4vlhlKVACCfVnveF_xqnuGDmQHLydj9MZJhkkBvhu7t-BtMzyTRiUOZg9hMED-Q6BHhH1tnb5WB0cOsAp2fhvoZrVVkYqb-ct7Mf6X2YZ84GVNOLjc9zyt1Bt6",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Suresh",
+        "feedback": "gAAAAABptaPLfbmJHDbtQoesXq5ZQZ5o8_fwSd_amRJKKV81iQJm-bGr_mshLiTTUgUYyi4Ym4fnHPuhKFfn3okG-B86w5UZYEE4-sT3--N1_MTzyeqeeyI=",
+        "sentiment": "positive",
+        "score": 1
+    },
+    {
+        "name": "Pooja",
+        "feedback": "gAAAAABptaPLOIs08RNplcZEuB9Mdn7_3hE-4mukK0kGU7U8zAj2VUElBC1XU6U-zhWZKAXCOxbV2XYQAJdmIKvBxo8QUJQdQQsSDhBL-hL5eqsXsICmx9Q=",
+        "sentiment": "negative",
+        "score": -1
+    },
+    {
+        "name": "Karthik",
+        "feedback": "gAAAAABptaPL6R-KFxcTt3CMyiY4WsavlZjEI0O5Z6QSLP15NS_KWFj30p-W0toJ-hNWLEOBCYtbO6TUwe6pV3hAoDg9-6vFRJWSymRh077cgx86_qYpjXk=",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Lakshmi",
+        "feedback": "gAAAAABptaPLPpzCHOHGMS_48QHgfi7WiFA3oBNpvsuIL2xNanPJinC_iagSqqrbGH271l9ErErjALF0AZv7LJUaZAKHrfBDztlC0S1k63P1h43esq3oplo=",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Nikhil",
+        "feedback": "gAAAAABptaPLHLOcl_vafNaNGt4lHb2FC2CeIicNewWgOk4U-MjdEk9un7gRuHgmUTQipeHME0cbFUj8O1jZ5e-VwXlKTuPm9uur_mWW12V4jDzJzg3SR84=",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Swathi",
+        "feedback": "gAAAAABptaPLga-TXSG-TxUxzQWXiQVmCdCOMvj5lhn6rOhMp0l72unxJ119gLUkYLFTeo5FsH8pjvIa_v_UgOrH5hf03uTDjKq1B8EV2uQXW1ovNrrhrbVpFM18fEhXUKzxFRgid0FU",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Ramesh",
+        "feedback": "gAAAAABptaPLUg8BId4BwbtmfgXLB3w64YrCryDT-R1AYoCq6ToUbVHwqNViF56XJVzVt-jibBolcA3qQGuB6PAaa0eiG8H3Nz176xU45F2n_f1HRZL5f_D2HGxOc3KkQw7140TNPxJ4",
+        "sentiment": "neutral",
+        "score": 0
+    },
+    {
+        "name": "Keerthi",
+        "feedback": "gAAAAABptaPLsEhjTNd4JNL1_aq6oqXzOwiH1YtlaIudsHjElv5sZTT7d56h4ys2LVve-ssfXmOd2U6FEiTH2HquqL1gcDPN80_I4WUMgAYi2VVYUc5uG28=",
+        "sentiment": "positive",
+        "score": 1
+    }
+]
