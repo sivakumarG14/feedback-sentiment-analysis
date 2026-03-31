@@ -103,38 +103,6 @@ async function loadStats() {
         const topics = await topicRes.json();
 
 
-        // WORD CLOUD
-
-        const wordMap = {};
-
-        const allWords = [
-            ...topics.top_positive_topics,
-            ...topics.top_negative_topics
-        ];
-
-        allWords.forEach(word => {
-            if (!wordMap[word]) {
-                wordMap[word] = 1;
-            } else {
-                wordMap[word]++;
-            }
-        });
-
-        const words = Object.entries(wordMap).map(([word, count]) => {
-            return [word, count * 20];
-        });
-
-        WordCloud(document.getElementById("wordCloud"), {
-            list: words,
-            gridSize: 12,
-            weightFactor: 8,
-            backgroundColor: "#ffffff",
-            color: function () {
-                return "hsl(" + Math.random() * 360 + ",70%,50%)";
-            }
-        });
-
-
         // NEGATIVE KEYWORDS
 
         const negKey = document.getElementById("negativeKeywords");
