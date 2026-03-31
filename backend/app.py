@@ -186,8 +186,9 @@ def login():
     users = load_users()
 
     for user in users:
-        if user["username"] == username and user["password"] == hash_password(password):
-            return jsonify({"role": "student", "message": "Login successful"})
+        if user["username"].lower() == username.lower() and user["password"] == hash_password(password):
+            role = user.get("role", "student")
+            return jsonify({"role": role, "message": "Login successful"})
 
     return jsonify({"error": "Invalid credentials"}), 401
 
@@ -237,7 +238,7 @@ def stats():
     submissions = load_submissions()
 
     return jsonify({
-        "total": len(submissions),
+        "total_feedbacks": len(submissions),
         "positive": sum(1 for s in submissions if s["sentiment"] == "positive"),
         "negative": sum(1 for s in submissions if s["sentiment"] == "negative"),
         "neutral": sum(1 for s in submissions if s["sentiment"] == "neutral")
@@ -291,11 +292,46 @@ def topics():
             neg_words.extend(words)
 
     return jsonify({
-        "positive_topics": [w for w, _ in Counter(pos_words).most_common(10)],
-        "negative_topics": [w for w, _ in Counter(neg_words).most_common(10)]
+        "top_positive_topics": [w for w, _ in Counter(pos_words).most_common(10)],
+        "top_negative_topics": [w for w, _ in Counter(neg_words).most_common(10)]
+    })
+
+# SENTIMENT TREND
+@app.route("/admin/sentiment-trend", methods=["GET"])
+def sentiment_trend():
+
+    submissions = load_submissions()
+
+    dates = []
+    pos_counts = []
+    neg_counts = []
+    neu_counts = []
+
+    pos = 0
+    neg = 0
+    neu = 0
+
+    for i, s in enumerate(submissions):
+        if s["sentiment"] == "positive":
+            pos += 1
+        elif s["sentiment"] == "negative":
+            neg += 1
+        else:
+            neu += 1
+
+        dates.append(f"Entry {i+1}")
+        pos_counts.append(pos)
+        neg_counts.append(neg)
+        neu_counts.append(neu)
+
+    return jsonify({
+        "dates": dates,
+        "positive": pos_counts,
+        "negative": neg_counts,
+        "neutral": neu_counts
     })
 
 # RUN SERVER 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
+    port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
